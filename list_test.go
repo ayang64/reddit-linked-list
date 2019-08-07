@@ -25,19 +25,15 @@ func TestFind(t *testing.T) {
 	cmp := func(a interface{}, b interface{}) bool {
 		// we only compare strings
 
-		t.Logf("here a")
 		s1, ok := a.(string)
 		if !ok {
 			return false
 		}
 
-		t.Logf("here b")
 		s2, ok := b.(string)
 		if !ok {
-			t.Logf("here c")
 			return false
 		}
-		t.Logf("here c")
 
 		t.Logf("comparing %q with %q", s1, s2)
 		if strings.HasPrefix(s1, s2) {
